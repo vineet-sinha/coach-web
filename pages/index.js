@@ -1,0 +1,16 @@
+import React from 'react';
+import Layout from '../components/Layout';
+import ChatInterface from '../components/ChatInterface';
+import styles from '../styles/Home.module.css';
+
+const Home = () => {
+  return (
+    <Layout>
+      <div className={styles.chatContainer}>
+        <ChatInterface />
+      </div>
+    </Layout>
+  );
+};
+
+export default Home;
