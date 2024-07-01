@@ -1,11 +1,6 @@
 import React from 'react';
 import Typed from '@prisma/client'
-
-// interface MessageProps {
-//   text: string;
-//   sender?: 'user' | 'bot';  // Define message sender type
-//   timestamp?: string;       // Assuming timestamp is a string for simplicity
-// }
+import { intlFormatDistance } from 'date-fns';
 
 const Message: React.FC<Typed.Message> = ({ content, role, createdAt }) => {
   const isUser = role === 'user';
@@ -16,7 +11,7 @@ const Message: React.FC<Typed.Message> = ({ content, role, createdAt }) => {
         <p>{content}</p>
       </div>
       <div className="message-timestamp">
-        <p>{createdAt.toJSON()}</p>
+        <p>{intlFormatDistance(createdAt, new Date())}</p>
       </div>
     </div>
   );
