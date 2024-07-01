@@ -2,41 +2,36 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Typed from '@prisma/client'
 import { Button, TextInput } from 'flowbite-react'
 import Message from './Message';
-import { useSession } from 'next-auth/react'
 import { useAuth } from '@/services/auth';
 
 interface ChatWindowProps {}
 
-const ChatWindow: React.FC<ChatWindowProps> = (props) => {
-  const session = useSession()
+const welcomeMessage:Typed.Message = {
+  role: 'assistant',
+  content: 'Welcome to Cone.ai! What can I help you learn today?',
+  createdAt: new Date()
+}
 
+const ChatWindow: React.FC<ChatWindowProps> = (props) => {
   const [chatSessionId, setChatSessionId] = useState('');
-  const [messages, setMessages] = useState<Array<Typed.Message>>([]);
+  const [messages, setMessages] = useState<Array<Typed.Message>>([welcomeMessage]);
   const [inputText, setInputText] = useState<string>('');
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
   const { isAuthenticated, user } = useAuth();
 
-  // useEffect(() => {
-  //   if (isAuthenticated) {
-  //     fetchRecentSessionChatHistory(userId).then((history) => {
-  //       setMessages(history);
-  //     });
-  //   }
-  // }, [isAuthenticated]);
-
   const fetchRecentSessionChatHistory = useCallback(async () => {
     try {
       if (!isAuthenticated) {
         setChatSessionId('');
-        setMessages([]);
+        setMessages([welcomeMessage]);
         return;
       }
       const response = await fetch(`/api/chatSessions/mostRecent?userId=${user?.id}`)
       if (!response.ok) {
         console.error('Unexpected Error: Failed to fetch session details', await response.json());
         setChatSessionId('');
-        setMessages([]);
+        setMessages([welcomeMessage]);
         return;
       }
       const history = (await response.json()) as Typed.ChatSession
@@ -73,7 +68,7 @@ const ChatWindow: React.FC<ChatWindowProps> = (props) => {
       })
       if (!response.ok) {
         console.error('Unexpected Error: Failed to send message', await response.json());
-        setMessages([]);
+        setMessages([welcomeMessage]);
         return;
       }
       const data = await response.json()
@@ -88,11 +83,8 @@ const ChatWindow: React.FC<ChatWindowProps> = (props) => {
         setMessages(prevMessages => [...prevMessages, chatResponse])
       } else {
         console.error('Unexpected Error: Failed to get response', data.message);
-        setMessages([]);
+        setMessages([welcomeMessage]);
       }
-
-      // const savedMessage = await saveChatMessage(user.id, inputText);
-      // setMessages([...messages, savedMessage]);
 
       // Scroll to bottom of chat window
       if (chatContainerRef.current) {
@@ -113,8 +105,17 @@ const ChatWindow: React.FC<ChatWindowProps> = (props) => {
     }
   };
 
+  const newSession = async () => {
+    setChatSessionId('')
+    setMessages([welcomeMessage])
+  }
+
   return (
     <div className="flex flex-col h-full">
+      <div className="px-4 py-2">
+        <Button onClick={newSession}>New Session</Button>
+      </div>
+
       <div className="flex-1 overflow-y-auto px-4 py-2" ref={chatContainerRef}>
         {messages.map((message, index) => (
           <Message key={index} content={message.content} role={message.role} createdAt={message.createdAt} />
