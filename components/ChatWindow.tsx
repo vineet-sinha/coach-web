@@ -55,6 +55,11 @@ const ChatWindow: React.FC<ChatWindowProps> = (props) => {
 
       const messageToSend = inputText.trim();
       setInputText('');
+      setMessages(prevMessages => [...prevMessages, {
+        role: 'user',
+        content: messageToSend,
+        createdAt: new Date()
+      }]);
       const response = await fetch(`/api/chatSessions/getResponse`, {
         method: 'POST',
         headers: {
