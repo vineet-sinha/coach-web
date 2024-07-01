@@ -4,7 +4,7 @@ import { signOut } from '@/auth'
 
 export default function SignoutPage() {
   return (
-    <div className="h-96 w-full flex flex-col place-content-center items-center">
+    <div className="h-screen w-full flex flex-col place-content-center items-center">
       <form
         action={async () => {
           'use server'
@@ -12,7 +12,7 @@ export default function SignoutPage() {
         }}
       >
         <Button type="submit" className="!bg-stone-500">
-          <FaGoogle />
+          <FaGoogle className="mr-4 self-center"/>
           Sign out
         </Button>
       </form>

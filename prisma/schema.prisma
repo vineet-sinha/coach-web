@@ -22,7 +22,7 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  chatSessions  ChatSessions[]
+  chatSessions  ChatSession[]
 }
  
 model Account {
@@ -70,7 +70,7 @@ model VerificationToken {
 ////////////////////////////////
 // Core Model for Coaching/Chat
 ////////////////////////////////
-model ChatSessions {
+model ChatSession {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   userId    String   @db.ObjectId
   user      User     @relation(fields: [userId], references: [id])
@@ -81,5 +81,12 @@ model ChatSessions {
 
 type Message {
   createdAt DateTime @default(now())
+  role      MessageRole
   content   String
+}
+
+enum MessageRole {
+  system
+  user
+  assistant
 }
