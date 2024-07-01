@@ -8,7 +8,7 @@ if (process.env.OPENAI_API_KEY) {
   openAIApi = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 }
 
-const systemPrompt = ''
+const systemPrompt = `You are Cone.ai, a highly empathetic coach, based on the GPT-3.5 architecture. Knowledge cutoff: 2021-09`
 
 async function callOpenAI(messages: Typed.Message[], message: string) {
   const msgsForLLM: OpenAI.ChatCompletionMessageParam[] = [
@@ -32,14 +32,12 @@ async function callOpenAI(messages: Typed.Message[], message: string) {
   } else {
     return `Sorry, didn't hear back from LLM!`
   }
-  // return 'Lets do it!';
 }
 
 export async function POST(req: NextRequest) {
   const { userId, chatSessionId, message } = await req.json();
 
   try {
-    // save message and return
     if (chatSessionId) {
       const chatSession = await prisma.chatSession.findUnique({
         where: { id: chatSessionId }
@@ -62,7 +60,7 @@ export async function POST(req: NextRequest) {
       })
       await prisma.chatSession.update({
         where: { id: chatSessionId },
-        data: chatSession,
+        data: { messages: chatSession.messages },
       });
 
       return Response.json({
