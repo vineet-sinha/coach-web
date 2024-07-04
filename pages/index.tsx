@@ -19,9 +19,7 @@ export default function Home() {
       /> */}
       <div className="w-[37.25rem] flex flex-col items-start justify-start pt-[0.75rem] px-[0rem] pb-[0rem] box-border min-w-[37.25rem] max-w-full text-[1.55rem] text-black mq825:min-w-full mq1450:flex-1">
         <div className="self-stretch flex flex-row items-start justify-start relative max-w-full">
-          <div
-            className={`flex-1 flex flex-col items-start justify-start gap-4 max-w-full text-left text-[0.75rem] text-dimgray font-inter mq825:gap-[5.25rem] mq450:gap-[2.625rem]`}
-          >
+          <div className="flex-1 flex flex-col items-start justify-start max-w-full text-left text-[0.75rem] text-dimgray font-inter mq825:gap-[5.25rem] mq450:gap-[2.625rem]">
             {/* <div className="w-[36.313rem] flex flex-row items-end justify-between pt-[0rem] pb-[0.3rem] pr-[1.25rem] pl-[0rem] box-border gap-[1.25rem] max-w-full">
               <div className="h-[7.5rem] w-[7.5rem] relative overflow-hidden shrink-0 z-[1]">
                 <img
@@ -40,8 +38,8 @@ export default function Home() {
             </div>
             <div className="self-stretch flex flex-row items-start justify-start py-[0rem] box-border max-w-full text-[1.15rem] text-darkslategray-100 mq825:pl-[1.313rem] mq825:pr-[1.375rem] mq825:box-border">
               <div className="flex-1 flex flex-col items-start justify-start gap-[3.062rem] max-w-full mq825:gap-[1.5rem]">
-                <div className="w-[16.775rem] flex flex-row items-start justify-start py-[0rem] px-[0.75rem] box-border">
-                  <div className="mt-12 md:mt-0 z-10 flex-1 relative tracking-[0.01em] leading-[1.953rem] font-medium">
+                <div className="w-[16.775rem] flex flex-row items-start justify-start px-[0.75rem] box-border">
+                  <div className="mt-12 z-10 flex-1 relative tracking-[0.01em] leading-[1.953rem] font-medium">
                     Transform Learning with an AI Companion
                   </div>
                 </div>
@@ -96,7 +94,7 @@ export default function Home() {
             </div>
           </div> */}
           <div className="md:w-[54.75rem] flex flex-row items-start justify-center max-w-full">
-            <h1 className="z-10 mt-64 md:mt-48 text-[2rem] md:text-[3rem] font-bold m-0 relative text-inherit uppercase font-inherit z-[1] mq825:text-[3rem] mq825:leading-[0.688rem] mq450:text-[1.813rem] mq450:leading-[0.438rem]">
+            <h1 className="z-10 mt-64 md:mt-48 text-[2rem] md:text-[3rem] font-bold m-0 relative text-inherit uppercase font-inherit mq825:text-[3rem] mq825:leading-[0.688rem] mq450:text-[1.813rem] mq450:leading-[0.438rem]">
               Learn with AI
             </h1>
           </div>
