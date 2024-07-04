@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
       <div className="h-[30.688rem] w-[7.375rem] relative [background:radial-gradient(50%_50%_at_50%_50%,_#9ae0d3,_#35a7a0_96.07%)] hidden z-[0]" />
       {/* <img
-        className="h-[1.531rem] w-[0.688rem] absolute !m-[0] right-[14rem] bottom-[3.375rem] object-contain z-[3]"
+        className="h-[1.531rem] w-[0.688rem] absolute right-[14rem] bottom-[3.375rem] object-contain z-[3]"
         loading="lazy"
         alt=""
         src="/vector.svg"
@@ -106,7 +106,7 @@ export default function Home() {
           <div className="md:w-[54.75rem] flex flex-row items-start justify-center max-w-full">
             <Image src="/ConeProposal.png" width="393" height="488" alt='Cone Chatbot' className="z-10" />
           </div>
-          <div className="w-full h-full absolute !m-[0] top-[0rem] right-[0rem] bottom-[0rem] left-[0rem]">
+          <div className="w-full h-full absolute top-[0rem] right-[0rem] bottom-[0rem] left-[0rem]">
             <div className="absolute h-full w-full top-[0rem] right-[0rem] bottom-[0rem] left-[0rem] rounded-[50%] [background:linear-gradient(135.94deg,_#d8e6ef_8.44%,_#b4d8e4),_#d9d9d9]" />
             {/* <textarea
               className="bg-skyblue-200 h-[5.969rem] w-[28.313rem] [outline:none] absolute top-[83.563rem] left-[5.313rem] [backdrop-filter:blur(26.12px)] rounded-[17.11px] box-border z-[1] border-[1.5px] border-solid border-skyblue-300"
