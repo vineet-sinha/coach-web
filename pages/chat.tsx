@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <title>Cone.ai - Coach</title>
         <meta name="description" content="Your Coach" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/cone-ai-192x192.png" />
       </Head>
 
       <main>
