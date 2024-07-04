@@ -104,7 +104,7 @@ export default function Home() {
             </h1>
           </div>
           <div className="md:w-[54.75rem] flex flex-row items-start justify-center max-w-full">
-            <Image src="/ConeProposal.png" width="393" height="488" alt='Cone Chatbot' />
+            <Image src="/ConeProposal.png" width="393" height="488" alt='Cone Chatbot' className="z-10" />
           </div>
           <div className="w-full h-full absolute !m-[0] top-[0rem] right-[0rem] bottom-[0rem] left-[0rem]">
             <div className="absolute h-full w-full top-[0rem] right-[0rem] bottom-[0rem] left-[0rem] rounded-[50%] [background:linear-gradient(135.94deg,_#d8e6ef_8.44%,_#b4d8e4),_#d9d9d9]" />
