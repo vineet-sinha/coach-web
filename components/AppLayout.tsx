@@ -1,18 +1,27 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useSession } from 'next-auth/react'
-import { Button, Navbar } from 'flowbite-react'
+import { Avatar, Button, Dropdown, Navbar } from 'flowbite-react'
+import type { CustomFlowbiteTheme } from 'flowbite-react'
+import { signIn, signOut } from '@/auth'
 import '@/app/globals.css'
 
+const navbarTheme: CustomFlowbiteTheme['navbar'] = {
+  collapse: {
+    list: "items-center mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium"
+  }
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const pathname = usePathname()
   const session = useSession()
 
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -34,42 +43,45 @@ export default function RootLayout({
   return (
     <div className="dark flex flex-col min-h-screen">
       <header className="sticky top-0 left-0 w-full justify-between items-center p-4 bg-stone-900 text-slate-50 z-10">
-        <Navbar fluid className="w-full">
+        <Navbar fluid theme={navbarTheme} className="w-full">
           <Navbar.Brand href="/">
+            <Image src="/cone-ai.svg" className="mr-3 h-6 sm:h-9" width="24" height="24" alt="Cone.ai Logo" />
             <span className="self-center whitespace-nowrap text-xl font-semibold">
               Cone.ai
             </span>
           </Navbar.Brand>
-          {/* <Navbar.Toggle />
+          <Navbar.Toggle />
           <Navbar.Collapse>
             <Navbar.Link href="/" as={Link} active={pathname === '/'}>
               Home
             </Navbar.Link>
             {isLoggedIn && (
               <Navbar.Link
-                href="/join-course"
+                href="/chat"
                 as={Link}
-                active={pathname === '/join-course'}
+                active={pathname === '/chat'}
               >
-                Join Course
+                Chat
               </Navbar.Link>
             )}
-          </Navbar.Collapse> */}
-          {isLoggedIn && profilePic? (
-            <Link href="/signout">
-              <Image
-                src={profilePic}
-                alt={'User'}
-                className="rounded-full"
-                width="32"
-                height="32"
-              />
-            </Link>
-          ) : (
-            <Button as={Link} href="/signin">
-              Sign In
-            </Button>
-          )}
+            {!isLoggedIn && <Button onClick={() => signIn('google', { redirectTo: '/', redirect: true })}>Get started</Button>}
+            {isLoggedIn && profilePic && <Dropdown
+              arrowIcon={false}
+              inline
+              label={
+                <Avatar alt="User settings" img={profilePic} rounded />
+              }
+            >
+              <Dropdown.Header>
+                <span className="block text-sm">{session.data!.user!.name}</span>
+                <span className="block truncate text-sm font-medium">{session.data!.user!.email}</span>
+              </Dropdown.Header>
+              {/* <Dropdown.Item>Dashboard</Dropdown.Item> */}
+              {/* <Dropdown.Item>Settings</Dropdown.Item> */}
+              {/* <Dropdown.Divider /> */}
+              <Dropdown.Item onClick={() => signOut({ redirectTo: '/', redirect: true })}>Sign out</Dropdown.Item>
+            </Dropdown>}
+          </Navbar.Collapse>
         </Navbar>
       </header>
       <div className="flex-1">{children}</div>
