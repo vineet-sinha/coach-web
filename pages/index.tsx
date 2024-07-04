@@ -19,26 +19,26 @@ export default function Home() {
       /> */}
       <div className="w-[37.25rem] flex flex-col items-start justify-start pt-[0.75rem] px-[0rem] pb-[0rem] box-border min-w-[37.25rem] max-w-full text-[1.55rem] text-black mq825:min-w-full mq1450:flex-1">
         <div className="self-stretch flex flex-row items-start justify-start relative max-w-full">
-          <div className="w-[52.113rem] absolute !m-[0] top-[13.938rem] right-[-18.931rem] tracking-[0.73em] leading-[1.375rem] uppercase font-medium flex items-center z-[1] mq450:text-[1.25rem] mq450:leading-[1.063rem]">{`Join the `}</div>
           <div
-            className={`flex-1 flex flex-col items-start justify-start gap-[10.443rem] max-w-full text-left text-[0.75rem] text-dimgray font-inter mq825:gap-[5.25rem] mq450:gap-[2.625rem]`}
+            className={`flex-1 flex flex-col items-start justify-start gap-4 max-w-full text-left text-[0.75rem] text-dimgray font-inter mq825:gap-[5.25rem] mq450:gap-[2.625rem]`}
           >
-            <div className="w-[36.313rem] flex flex-row items-end justify-between pt-[0rem] pb-[0.3rem] pr-[1.25rem] pl-[0rem] box-border gap-[1.25rem] max-w-full">
+            {/* <div className="w-[36.313rem] flex flex-row items-end justify-between pt-[0rem] pb-[0.3rem] pr-[1.25rem] pl-[0rem] box-border gap-[1.25rem] max-w-full">
               <div className="h-[7.5rem] w-[7.5rem] relative overflow-hidden shrink-0 z-[1]">
-                {/* <img
+                <img
                   className="absolute top-[2.313rem] left-[1.375rem] w-[4.313rem] h-[2.938rem] object-cover"
                   loading="lazy"
                   alt=""
                   src="/logo@2x.png"
-                /> */}
+                />
               </div>
-            </div>
-            <div className="self-stretch flex flex-row items-start justify-end max-w-full text-[7.175rem] text-black">
-              <div className="w-[33.813rem] relative tracking-[-0.04em] leading-[1.5rem] uppercase font-semibold flex items-center shrink-0 max-w-full z-[1] mq825:text-[3.563rem] mq825:leading-[0.875rem] mq450:text-[2.125rem] mq450:leading-[0.625rem]">
+            </div> */}
+            <div className="mt-32 w-[52.113rem] tracking-[0.73em] leading-[1.375rem] uppercase font-medium flex items-center z-[1] text-[1.55rem] mq450:text-[1.25rem] mq450:leading-[1.063rem]">Join the</div>
+            <div className="flex flex-row items-start max-w-full text-[7.175rem] text-black">
+              <div className="w-[33.813rem] relative tracking-[-0.04em] uppercase font-semibold flex items-center shrink-0 max-w-full z-[1] mq825:text-[3.563rem] mq825:leading-[0.875rem] mq450:text-[2.125rem] mq450:leading-[0.625rem]">
                 Waitlist
               </div>
             </div>
-            <div className="self-stretch flex flex-row items-start justify-start py-[0rem] pr-[2.812rem] pl-[2.687rem] box-border max-w-full text-[1.15rem] text-darkslategray-100 mq825:pl-[1.313rem] mq825:pr-[1.375rem] mq825:box-border">
+            <div className="self-stretch flex flex-row items-start justify-start py-[0rem] box-border max-w-full text-[1.15rem] text-darkslategray-100 mq825:pl-[1.313rem] mq825:pr-[1.375rem] mq825:box-border">
               <div className="flex-1 flex flex-col items-start justify-start gap-[3.062rem] max-w-full mq825:gap-[1.5rem]">
                 <div className="w-[16.775rem] flex flex-row items-start justify-start py-[0rem] px-[0.75rem] box-border">
                   <div className="flex-1 relative tracking-[0.01em] leading-[1.953rem] font-medium">
@@ -47,7 +47,7 @@ export default function Home() {
                 </div>
                 <div className="self-stretch flex flex-col items-start justify-start gap-[3.937rem] max-w-full text-[1.125rem] text-gray mq825:gap-[1.938rem] mq450:gap-[1rem]">
                   <div className="self-stretch flex flex-row items-start justify-start py-[0rem] pr-[0rem] pl-[0.5rem] box-border max-w-full">
-                    <div className="flex-1 flex flex-row items-start justify-between max-w-full gap-[1.25rem] mq450:flex-wrap">
+                    <div className="flex-1 flex flex-row items-start justify-start max-w-full gap-[1.25rem] mq450:flex-wrap">
                       <button className="cursor-pointer pt-[0.75rem] px-[1.75rem] pb-[0.812rem] bg-[transparent] rounded-[9.26px] [background:linear-gradient(167.04deg,_#afe9fd,_#73adc1)] box-border flex flex-row items-start justify-start whitespace-nowrap border-[1.7px] border-solid border-skyblue-100 hover:bg-cadetblue-200 hover:box-border hover:border-[1.7px] hover:border-solid hover:border-cadetblue-100">
                         <div className="h-[2.894rem] relative rounded-[9.26px] [background:linear-gradient(167.04deg,_#afe9fd,_#73adc1)] box-border hidden border-[1.7px] border-solid border-skyblue-100" />
                         <b className="relative text-[0.869rem] tracking-[0.14em] uppercase inline-block font-inter text-white text-left min-w-[4.375rem] z-[1]">
@@ -75,28 +75,28 @@ export default function Home() {
 
         </div>
       </div>
-      <div className="h-[61.375rem] w-[54.75rem] flex flex-col items-end justify-start pt-[30.687rem] px-[0rem] pb-[0rem] box-border min-w-[54.75rem] max-w-full text-[6rem] text-white font-bebas-neue lg:min-w-full mq825:h-auto mq825:pt-[12.938rem] mq825:box-border mq450:pt-[8.438rem] mq450:box-border mq1450:flex-1 mq1450:pt-[19.938rem] mq1450:box-border">
-        <div className="mt-[-66.063rem] mr-[-40rem] w-[94.75rem] flex flex-col items-start justify-start pt-[38.875rem] px-[4.937rem] pb-[33.5rem] box-border relative gap-[2.875rem] shrink-0 max-w-[174%] lg:pl-[2.438rem] lg:pr-[2.438rem] lg:box-border mq825:gap-[1.438rem] mq825:pt-[16.438rem] mq825:pb-[14.125rem] mq825:box-border mq1450:pt-[25.25rem] mq1450:pb-[21.75rem] mq1450:box-border">
-          <div
+      <div className="h-[61.375rem] w-[54.75rem] flex flex-col items-end justify-start pt-[30.687rem] px-[0rem] pb-[0rem] box-border min-w-[54.75rem] max-w-full text-white font-bebas-neue lg:min-w-full mq825:h-auto mq825:pt-[12.938rem] mq825:box-border mq450:pt-[8.438rem] mq450:box-border mq1450:flex-1 mq1450:pt-[19.938rem] mq1450:box-border">
+        <div className="mt-[-66.063rem] -mr-32 w-[94.75rem] flex flex-col items-start justify-start pt-[38.875rem] px-[4.937rem] pb-[33.5rem] box-border relative shrink-0 lg:pl-[2.438rem] lg:pr-[2.438rem] lg:box-border mq825:gap-[1.438rem] mq825:pt-[16.438rem] mq825:pb-[14.125rem] mq825:box-border mq1450:pt-[25.25rem] mq1450:pb-[21.75rem] mq1450:box-border">
+          {/* <div
             className={`w-[46.625rem] flex flex-row items-start justify-between gap-[1.25rem] max-w-full text-left text-[0.75rem] text-dimgray font-inter mq825:flex-wrap`}
           >
-            {/* <div className="w-[17.625rem] flex flex-col items-start justify-start">
+            <div className="w-[17.625rem] flex flex-col items-start justify-start">
               <button className="cursor-pointer pt-[0.625rem] pb-[0.687rem] pr-[1.75rem] pl-[1.812rem] bg-[transparent] w-[6.688rem] rounded-lg [background:linear-gradient(196.78deg,_#9ae0d3,_#35a7a0_96.07%)] box-border flex flex-row items-start justify-start z-[1] border-[1.5px] border-solid border-mediumturquoise-200 hover:bg-darkcyan-200 hover:box-border hover:border-[1.5px] hover:border-solid hover:border-darkcyan-100">
                 <div className="h-[2.5rem] w-[6.688rem] relative rounded-lg [background:linear-gradient(196.78deg,_#9ae0d3,_#35a7a0_96.07%)] box-border hidden border-[1.5px] border-solid border-mediumturquoise-200" />
                 <a className="[text-decoration:none] relative text-[0.75rem] tracking-[0.14em] uppercase font-bold font-inter text-white text-left inline-block min-w-[2.875rem] z-[2]">
                   login
                 </a>
               </button>
-            </div> */}
+            </div>
             <div className="h-[18.375rem] w-[0.75rem] flex flex-col items-start justify-start pt-[1.125rem] px-[0rem] pb-[0rem] box-border text-[0.875rem] text-whitesmoke">
               <div className="w-[17.25rem] relative tracking-[0.5em] leading-[88%] uppercase font-semibold inline-block [transform:_rotate(90deg)] z-[3]">
                 &nbsp;
-                {/* For Domain Experts */}
+                For Domain Experts
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="w-[54.75rem] flex flex-row items-start justify-center max-w-full">
-            <h1 className="m-0 relative text-inherit leading-[1.125rem] uppercase font-normal font-inherit z-[1] mq825:text-[3rem] mq825:leading-[0.688rem] mq450:text-[1.813rem] mq450:leading-[0.438rem]">
+            <h1 className="mt-48 text-[3rem] font-bold m-0 relative text-inherit uppercase font-inherit z-[1] mq825:text-[3rem] mq825:leading-[0.688rem] mq450:text-[1.813rem] mq450:leading-[0.438rem]">
               Learn with AI
             </h1>
           </div>
@@ -107,14 +107,7 @@ export default function Home() {
               rows={5}
               cols={23}
             /> */}
-            <div className="absolute top-[34.125rem] left-[35.063rem] [filter:blur(316px)] rounded-[50%] bg-mediumturquoise-300 w-[17.625rem] h-[17.625rem] z-[2]" />
-            <div className="absolute top-[75.75rem] left-[32.063rem] [filter:blur(316px)] rounded-[50%] bg-lightskyblue w-[17.625rem] h-[17.625rem] z-[2]" />
-            <div className="absolute top-[90.375rem] left-[45.313rem] rounded-[50%] bg-mediumturquoise-100 w-[4.375rem] h-[4.375rem] z-[3]" />
-            <div className="absolute top-[92.25rem] left-[2.625rem] rounded-[50%] bg-lightblue-200 w-[0.625rem] h-[0.625rem] z-[1]" />
-            <div className="absolute top-[92.25rem] left-[3.938rem] rounded-[50%] bg-lightblue-200 w-[0.625rem] h-[0.625rem] z-[1]" />
-            <div className="absolute top-[92.25rem] left-[5.25rem] rounded-[50%] bg-lightblue-200 w-[0.625rem] h-[0.625rem] z-[1]" />
-            <div className="absolute top-[92.25rem] left-[6.563rem] rounded-[50%] bg-lightblue-200 w-[0.625rem] h-[0.625rem] z-[1]" />
-            <div className="absolute top-[66.313rem] left-[4.938rem] shadow-[9px_59px_90px_rgba(131,_196,_220,_0.47)] rounded-[50%] [background:linear-gradient(135.94deg,_#dff3ff_8.44%,_#9acdde)] w-[11rem] h-[11.219rem] z-[1]" />
+            <div className="absolute top-[54rem] shadow-[9px_59px_90px_rgba(131,_196,_220,_0.47)] rounded-[50%] [background:linear-gradient(135.94deg,_#dff3ff_8.44%,_#9acdde)] w-[11rem] h-[11.219rem] z-[1]" />
           </div>
         </div>
         <div className="w-[7.375rem] h-[30.688rem] [background:linear-gradient(180deg,_#89c8dd,_#73adc1)] flex flex-row items-start justify-start pt-[5.75rem] pb-[6.5rem] pr-[3.187rem] pl-[3.437rem] box-border shrink-0 z-[1] mt-[-28.688rem] text-[0.875rem] text-whitesmoke font-inter mq450:pl-[1.25rem] mq450:pr-[1.25rem] mq450:box-border">
