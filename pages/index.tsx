@@ -41,11 +41,11 @@ export default function Home() {
             <div className="self-stretch flex flex-row items-start justify-start py-[0rem] box-border max-w-full text-[1.15rem] text-darkslategray-100 mq825:pl-[1.313rem] mq825:pr-[1.375rem] mq825:box-border">
               <div className="flex-1 flex flex-col items-start justify-start gap-[3.062rem] max-w-full mq825:gap-[1.5rem]">
                 <div className="w-[16.775rem] flex flex-row items-start justify-start py-[0rem] px-[0.75rem] box-border">
-                  <div className="flex-1 relative tracking-[0.01em] leading-[1.953rem] font-medium">
+                  <div className="mt-12 md:mt-0 z-10 flex-1 relative tracking-[0.01em] leading-[1.953rem] font-medium">
                     Transform Learning with an AI Companion
                   </div>
                 </div>
-                <div className="self-stretch flex flex-col items-start justify-start gap-[3.937rem] max-w-full text-[1.125rem] text-gray mq825:gap-[1.938rem] mq450:gap-[1rem]">
+                <div className="z-10 self-stretch flex flex-col items-start justify-start gap-[3.937rem] max-w-full text-[1.125rem] text-gray mq825:gap-[1.938rem] mq450:gap-[1rem]">
                   <div className="self-stretch flex flex-row items-start justify-start py-[0rem] pr-[0rem] pl-[0.5rem] box-border max-w-full">
                     <div className="flex-1 flex flex-row items-start justify-start max-w-full gap-[1.25rem] mq450:flex-wrap">
                       <button className="cursor-pointer pt-[0.75rem] px-[1.75rem] pb-[0.812rem] bg-[transparent] rounded-[9.26px] [background:linear-gradient(167.04deg,_#afe9fd,_#73adc1)] box-border flex flex-row items-start justify-start whitespace-nowrap border-[1.7px] border-solid border-skyblue-100 hover:bg-cadetblue-200 hover:box-border hover:border-[1.7px] hover:border-solid hover:border-cadetblue-100">
@@ -96,7 +96,7 @@ export default function Home() {
             </div>
           </div> */}
           <div className="md:w-[54.75rem] flex flex-row items-start justify-center max-w-full">
-            <h1 className="mt-64 md:mt-48 text-[2rem] md:text-[3rem] font-bold m-0 relative text-inherit uppercase font-inherit z-[1] mq825:text-[3rem] mq825:leading-[0.688rem] mq450:text-[1.813rem] mq450:leading-[0.438rem]">
+            <h1 className="z-10 mt-64 md:mt-48 text-[2rem] md:text-[3rem] font-bold m-0 relative text-inherit uppercase font-inherit z-[1] mq825:text-[3rem] mq825:leading-[0.688rem] mq450:text-[1.813rem] mq450:leading-[0.438rem]">
               Learn with AI
             </h1>
           </div>
