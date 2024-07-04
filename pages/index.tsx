@@ -95,8 +95,8 @@ export default function Home() {
               </div>
             </div>
           </div> */}
-          <div className="w-[54.75rem] flex flex-row items-start justify-center max-w-full">
-            <h1 className="mt-48 text-[3rem] font-bold m-0 relative text-inherit uppercase font-inherit z-[1] mq825:text-[3rem] mq825:leading-[0.688rem] mq450:text-[1.813rem] mq450:leading-[0.438rem]">
+          <div className="md:w-[54.75rem] flex flex-row items-start justify-center max-w-full">
+            <h1 className="mt-64 md:mt-48 text-[2rem] md:text-[3rem] font-bold m-0 relative text-inherit uppercase font-inherit z-[1] mq825:text-[3rem] mq825:leading-[0.688rem] mq450:text-[1.813rem] mq450:leading-[0.438rem]">
               Learn with AI
             </h1>
           </div>
