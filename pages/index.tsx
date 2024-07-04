@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image'
 import { Button } from 'flowbite-react'
 // import { FrameComponent } from '../components/HomePageFrameComponent';
 // import { FrameComponentRHS } from '../components/HomePageRightFrameComponent';
@@ -101,6 +102,9 @@ export default function Home() {
             <h1 className="z-10 mt-72 md:mt-32 text-[2rem] md:text-[3rem] font-bold m-0 relative text-inherit uppercase font-inherit mq825:text-[3rem] mq825:leading-[0.688rem] mq450:text-[1.813rem] mq450:leading-[0.438rem]">
               Learning Should<br/>Be Easy
             </h1>
+          </div>
+          <div className="md:w-[54.75rem] flex flex-row items-start justify-center max-w-full">
+            <Image src="/ConeProposal.png" width="393" height="488" alt='Cone Chatbot' />
           </div>
           <div className="w-full h-full absolute !m-[0] top-[0rem] right-[0rem] bottom-[0rem] left-[0rem]">
             <div className="absolute h-full w-full top-[0rem] right-[0rem] bottom-[0rem] left-[0rem] rounded-[50%] [background:linear-gradient(135.94deg,_#d8e6ef_8.44%,_#b4d8e4),_#d9d9d9]" />
