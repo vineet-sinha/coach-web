@@ -33,19 +33,19 @@ export default function Home() {
                 />
               </div>
             </div> */}
-            <div className="mt-32 w-[52.113rem] tracking-[0.73em] leading-[1.375rem] uppercase font-medium flex items-center z-[1] text-[1rem] mq450:text-[1.25rem] mq450:leading-[1.063rem]">
+            <div className="mt-32 w-[52.113rem] tracking-widest leading-[1.375rem] uppercase font-medium flex items-center z-[1] text-[1rem] mq450:text-[1.25rem] mq450:leading-[1.063rem]">
               AI Powered
             </div>
             <div className="flex flex-row items-start max-w-full text-[5rem] text-black">
-              <div className="w-[33.813rem] relative tracking-[-0.04em] uppercase font-semibold flex items-center shrink-0 max-w-full z-[1] mq825:text-[3.563rem] mq825:leading-[0.875rem] mq450:text-[2.125rem] mq450:leading-[0.625rem]">
+              <div className="w-[33.813rem] relative uppercase font-semibold flex items-center shrink-0 max-w-full z-[1] mq825:text-[3.563rem] mq825:leading-[0.875rem] mq450:text-[2.125rem] mq450:leading-[0.625rem]">
                 Learning Companion
               </div>
             </div>
             <div className="self-stretch flex flex-row items-start justify-start py-[0rem] box-border max-w-full text-[1.15rem] text-darkslategray-100 mq825:pl-[1.313rem] mq825:pr-[1.375rem] mq825:box-border">
-              <div className="flex-1 flex flex-col items-start justify-start gap-[3.062rem] max-w-full mq825:gap-[1.5rem]">
-                <div className="w-[16.775rem] flex flex-row items-start justify-start px-[0.75rem] box-border">
+              <div className="flex-1 flex flex-col items-start justify-start gap-[1rem] max-w-full mq825:gap-[1.5rem]">
+                <div className="flex flex-row items-start justify-start px-[0.75rem] box-border">
                   <div className="mt-16 z-10 flex-1 relative tracking-[0.01em] leading-[1.953rem] font-medium">
-                    Personalized coaching by AI can transform you.
+                    Personalized coaching by AI.<br/> Transform yourself!
                   </div>
                 </div>
                 <div className="z-10 self-stretch flex flex-col items-start justify-start gap-[3.937rem] max-w-full text-[1.125rem] text-gray mq825:gap-[1.938rem] mq450:gap-[1rem]">
@@ -107,13 +107,13 @@ export default function Home() {
             <Image src="/ConeProposal.png" width="393" height="488" alt='Cone Chatbot' className="z-10" />
           </div>
           <div className="w-full h-full absolute top-[0rem] right-[0rem] bottom-[0rem] left-[0rem]">
-            <div className="absolute h-full w-full top-[0rem] right-[0rem] bottom-[0rem] left-[0rem] rounded-[50%] [background:linear-gradient(135.94deg,_#d8e6ef_8.44%,_#b4d8e4),_#d9d9d9]" />
+            <div className="absolute h-3/4 w-full top-[6rem] right-[0rem] bottom-[0rem] left-[4rem] rounded-[50%] [background:linear-gradient(135.94deg,_#d8e6ef_8.44%,_#b4d8e4),_#d9d9d9]" />
             {/* <textarea
               className="bg-skyblue-200 h-[5.969rem] w-[28.313rem] [outline:none] absolute top-[83.563rem] left-[5.313rem] [backdrop-filter:blur(26.12px)] rounded-[17.11px] box-border z-[1] border-[1.5px] border-solid border-skyblue-300"
               rows={5}
               cols={23}
             /> */}
-            <div className="invisible md:visible absolute top-[54rem] shadow-[9px_59px_90px_rgba(131,_196,_220,_0.47)] rounded-[50%] [background:linear-gradient(135.94deg,_#dff3ff_8.44%,_#9acdde)] w-[11rem] h-[11.219rem] z-[1]" />
+            <div className="invisible md:visible absolute top-[60rem] left-[4rem] shadow-[9px_59px_90px_rgba(131,_196,_220,_0.47)] rounded-[50%] [background:linear-gradient(135.94deg,_#dff3ff_8.44%,_#9acdde)] w-[11rem] h-[11.219rem] z-[1]" />
           </div>
         </div>
         <div className="w-[7.375rem] h-[30.688rem] [background:linear-gradient(180deg,_#89c8dd,_#73adc1)] flex flex-row items-start justify-start pt-[5.75rem] pb-[6.5rem] pr-[3.187rem] pl-[3.437rem] box-border shrink-0 z-[1] mt-[-28.688rem] text-[0.875rem] text-whitesmoke font-inter mq450:pl-[1.25rem] mq450:pr-[1.25rem] mq450:box-border">
