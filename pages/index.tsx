@@ -1,6 +1,8 @@
 import Head from 'next/head';
+import { Button } from 'flowbite-react'
 // import { FrameComponent } from '../components/HomePageFrameComponent';
 // import { FrameComponentRHS } from '../components/HomePageRightFrameComponent';
+import { signIn } from '@/auth'
 
 export default function Home() {
   return (
@@ -30,28 +32,30 @@ export default function Home() {
                 />
               </div>
             </div> */}
-            <div className="mt-32 w-[52.113rem] tracking-[0.73em] leading-[1.375rem] uppercase font-medium flex items-center z-[1] text-[1.55rem] mq450:text-[1.25rem] mq450:leading-[1.063rem]">Join the</div>
-            <div className="flex flex-row items-start max-w-full text-[7.175rem] text-black">
+            <div className="mt-32 w-[52.113rem] tracking-[0.73em] leading-[1.375rem] uppercase font-medium flex items-center z-[1] text-[1rem] mq450:text-[1.25rem] mq450:leading-[1.063rem]">
+              AI Powered
+            </div>
+            <div className="flex flex-row items-start max-w-full text-[5rem] text-black">
               <div className="w-[33.813rem] relative tracking-[-0.04em] uppercase font-semibold flex items-center shrink-0 max-w-full z-[1] mq825:text-[3.563rem] mq825:leading-[0.875rem] mq450:text-[2.125rem] mq450:leading-[0.625rem]">
-                Waitlist
+                Learning Companion
               </div>
             </div>
             <div className="self-stretch flex flex-row items-start justify-start py-[0rem] box-border max-w-full text-[1.15rem] text-darkslategray-100 mq825:pl-[1.313rem] mq825:pr-[1.375rem] mq825:box-border">
               <div className="flex-1 flex flex-col items-start justify-start gap-[3.062rem] max-w-full mq825:gap-[1.5rem]">
                 <div className="w-[16.775rem] flex flex-row items-start justify-start px-[0.75rem] box-border">
-                  <div className="mt-12 z-10 flex-1 relative tracking-[0.01em] leading-[1.953rem] font-medium">
-                    Transform Learning with an AI Companion
+                  <div className="mt-16 z-10 flex-1 relative tracking-[0.01em] leading-[1.953rem] font-medium">
+                    Personalized coaching by AI can transform you.
                   </div>
                 </div>
                 <div className="z-10 self-stretch flex flex-col items-start justify-start gap-[3.937rem] max-w-full text-[1.125rem] text-gray mq825:gap-[1.938rem] mq450:gap-[1rem]">
                   <div className="self-stretch flex flex-row items-start justify-start py-[0rem] pr-[0rem] pl-[0.5rem] box-border max-w-full">
                     <div className="flex-1 flex flex-row items-start justify-start max-w-full gap-[1.25rem] mq450:flex-wrap">
-                      <button className="cursor-pointer pt-[0.75rem] px-[1.75rem] pb-[0.812rem] bg-[transparent] rounded-[9.26px] [background:linear-gradient(167.04deg,_#afe9fd,_#73adc1)] box-border flex flex-row items-start justify-start whitespace-nowrap border-[1.7px] border-solid border-skyblue-100 hover:bg-cadetblue-200 hover:box-border hover:border-[1.7px] hover:border-solid hover:border-cadetblue-100">
+                      <Button className="cursor-pointer pt-[0.75rem] px-[1.75rem] pb-[0.812rem] bg-[transparent] rounded-[9.26px] [background:linear-gradient(167.04deg,_#afe9fd,_#73adc1)] box-border flex flex-row items-start justify-start whitespace-nowrap border-[1.7px] border-solid border-skyblue-100 hover:bg-cadetblue-200 hover:box-border hover:border-[1.7px] hover:border-solid hover:border-cadetblue-100" onClick={() => signIn('google', { redirectTo: '/', redirect: true })}>
                         <div className="h-[2.894rem] relative rounded-[9.26px] [background:linear-gradient(167.04deg,_#afe9fd,_#73adc1)] box-border hidden border-[1.7px] border-solid border-skyblue-100" />
                         <b className="relative text-[0.869rem] tracking-[0.14em] uppercase inline-block font-inter text-white text-left min-w-[4.375rem] z-[1]">
                           Get Started
                         </b>
-                      </button>
+                      </Button>
                       <div className="h-[14.563rem] w-[13.563rem] flex flex-col items-start justify-start pt-[0.812rem] px-[0rem] pb-[0rem] box-border min-w-[13.563rem] mq450:flex-1">
                         <div className="self-stretch flex-1 relative shadow-[54px_61px_90px_rgba(108,_198,_188,_0.51)] rounded-[50%] [background:radial-gradient(50%_50%_at_50%_50%,_#9ae0d3,_#35a7a0_96.07%)]" />
                       </div>
@@ -94,8 +98,8 @@ export default function Home() {
             </div>
           </div> */}
           <div className="md:w-[54.75rem] flex flex-row items-start justify-center max-w-full">
-            <h1 className="z-10 mt-64 md:mt-48 text-[2rem] md:text-[3rem] font-bold m-0 relative text-inherit uppercase font-inherit mq825:text-[3rem] mq825:leading-[0.688rem] mq450:text-[1.813rem] mq450:leading-[0.438rem]">
-              Learn with AI
+            <h1 className="z-10 mt-72 md:mt-32 text-[2rem] md:text-[3rem] font-bold m-0 relative text-inherit uppercase font-inherit mq825:text-[3rem] mq825:leading-[0.688rem] mq450:text-[1.813rem] mq450:leading-[0.438rem]">
+              Learning Should<br/>Be Easy
             </h1>
           </div>
           <div className="w-full h-full absolute !m-[0] top-[0rem] right-[0rem] bottom-[0rem] left-[0rem]">
@@ -105,7 +109,7 @@ export default function Home() {
               rows={5}
               cols={23}
             /> */}
-            <div className="absolute top-[54rem] shadow-[9px_59px_90px_rgba(131,_196,_220,_0.47)] rounded-[50%] [background:linear-gradient(135.94deg,_#dff3ff_8.44%,_#9acdde)] w-[11rem] h-[11.219rem] z-[1]" />
+            <div className="invisible md:visible absolute top-[54rem] shadow-[9px_59px_90px_rgba(131,_196,_220,_0.47)] rounded-[50%] [background:linear-gradient(135.94deg,_#dff3ff_8.44%,_#9acdde)] w-[11rem] h-[11.219rem] z-[1]" />
           </div>
         </div>
         <div className="w-[7.375rem] h-[30.688rem] [background:linear-gradient(180deg,_#89c8dd,_#73adc1)] flex flex-row items-start justify-start pt-[5.75rem] pb-[6.5rem] pr-[3.187rem] pl-[3.437rem] box-border shrink-0 z-[1] mt-[-28.688rem] text-[0.875rem] text-whitesmoke font-inter mq450:pl-[1.25rem] mq450:pr-[1.25rem] mq450:box-border">
