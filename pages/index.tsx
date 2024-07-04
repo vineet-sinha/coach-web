@@ -42,16 +42,16 @@ export default function Home() {
               <div className="flex-1 flex flex-col items-start justify-start gap-[3.062rem] max-w-full mq825:gap-[1.5rem]">
                 <div className="w-[16.775rem] flex flex-row items-start justify-start py-[0rem] px-[0.75rem] box-border">
                   <div className="flex-1 relative tracking-[0.01em] leading-[1.953rem] font-medium">
-                    Transform AI into Your Learning Companion
+                    Transform Learning with an AI Companion
                   </div>
                 </div>
                 <div className="self-stretch flex flex-col items-start justify-start gap-[3.937rem] max-w-full text-[1.125rem] text-gray mq825:gap-[1.938rem] mq450:gap-[1rem]">
                   <div className="self-stretch flex flex-row items-start justify-start py-[0rem] pr-[0rem] pl-[0.5rem] box-border max-w-full">
                     <div className="flex-1 flex flex-row items-start justify-between max-w-full gap-[1.25rem] mq450:flex-wrap">
-                      <button className="cursor-pointer pt-[0.75rem] px-[1.75rem] pb-[0.812rem] bg-[transparent] w-[9.625rem] rounded-[9.26px] [background:linear-gradient(167.04deg,_#afe9fd,_#73adc1)] box-border flex flex-row items-start justify-start whitespace-nowrap border-[1.7px] border-solid border-skyblue-100 hover:bg-cadetblue-200 hover:box-border hover:border-[1.7px] hover:border-solid hover:border-cadetblue-100">
-                        <div className="h-[2.894rem] w-[9.625rem] relative rounded-[9.26px] [background:linear-gradient(167.04deg,_#afe9fd,_#73adc1)] box-border hidden border-[1.7px] border-solid border-skyblue-100" />
+                      <button className="cursor-pointer pt-[0.75rem] px-[1.75rem] pb-[0.812rem] bg-[transparent] rounded-[9.26px] [background:linear-gradient(167.04deg,_#afe9fd,_#73adc1)] box-border flex flex-row items-start justify-start whitespace-nowrap border-[1.7px] border-solid border-skyblue-100 hover:bg-cadetblue-200 hover:box-border hover:border-[1.7px] hover:border-solid hover:border-cadetblue-100">
+                        <div className="h-[2.894rem] relative rounded-[9.26px] [background:linear-gradient(167.04deg,_#afe9fd,_#73adc1)] box-border hidden border-[1.7px] border-solid border-skyblue-100" />
                         <b className="relative text-[0.869rem] tracking-[0.14em] uppercase inline-block font-inter text-white text-left min-w-[4.375rem] z-[1]">
-                          Sign up
+                          Get Started
                         </b>
                       </button>
                       <div className="h-[14.563rem] w-[13.563rem] flex flex-col items-start justify-start pt-[0.812rem] px-[0rem] pb-[0rem] box-border min-w-[13.563rem] mq450:flex-1">
