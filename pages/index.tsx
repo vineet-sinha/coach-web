@@ -1,10 +1,15 @@
 import Head from 'next/head';
-import { FrameComponent } from '../components/HomePageFrameComponent';
-import { FrameComponentRHS } from '../components/HomePageRightFrameComponent';
+// import { FrameComponent } from '../components/HomePageFrameComponent';
+// import { FrameComponentRHS } from '../components/HomePageRightFrameComponent';
 
 export default function Home() {
   return (
-    <div className="relative shadow-[36px_46px_124px_rgba(137,_173,_200,_0.88)] rounded-[30px] [background:radial-gradient(50%_50%_at_50%_50%,_#ebf3f5_6.99%,_#c5e2f0)] box-border w-full overflow-hidden flex flex-row items-start justify-start py-[0rem] pr-[0rem] pl-[2.125rem] leading-[normal] tracking-[normal] [row-gap:20px] text-left text-[1.125rem] text-gray font-inter border-[3px] border-solid border-lightblue-100 mq1450:flex-wrap mq1450:pl-[1.25rem] mq1450:pr-[1.25rem] mq1450:pb-[1.25rem] mq1450:box-border">
+    <div className="relative shadow-[36px_46px_124px_rgba(137,_173,_200,_0.88)] [background:radial-gradient(50%_50%_at_50%_50%,_#ebf3f5_6.99%,_#c5e2f0)] box-border w-full overflow-hidden flex flex-row items-start justify-start py-[0rem] pr-[0rem] pl-[2.125rem] leading-[normal] tracking-[normal] [row-gap:20px] text-left text-[1.125rem] text-gray font-inter border-[3px] border-solid border-lightblue-100 mq1450:flex-wrap mq1450:pl-[1.25rem] mq1450:pr-[1.25rem] mq1450:pb-[1.25rem] mq1450:box-border">
+      <Head>
+        <title>Cone.ai - Coach</title>
+        <meta name="description" content="Your Coach" />
+        <link rel="icon" href="/cone-ai.svg" />
+      </Head>
       <div className="h-[30.688rem] w-[7.375rem] relative [background:radial-gradient(50%_50%_at_50%_50%,_#9ae0d3,_#35a7a0_96.07%)] hidden z-[0]" />
       {/* <img
         className="h-[1.531rem] w-[0.688rem] absolute !m-[0] right-[14rem] bottom-[3.375rem] object-contain z-[3]"
