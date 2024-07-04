@@ -21,17 +21,23 @@ async function callOpenAI(messages: Typed.Message[], message: string) {
     messages: msgsForLLM,
   })
 
-  if (
-    response &&
-    response.choices &&
-    response.choices.length > 0 &&
-    response.choices[0].message &&
-    response.choices[0].message.content
-  ) {
-    return response.choices[0].message.content
+  const llmResponse = response.choices[0].message.content;
+  if (llmResponse) {
+    return llmResponse;
   } else {
     return `Sorry, didn't hear back from LLM!`
   }
+  // if (
+  //   response &&
+  //   response.choices &&
+  //   response.choices.length > 0 &&
+  //   response.choices[0].message &&
+  //   response.choices[0].message.content
+  // ) {
+  //   return response.choices[0].message.content
+  // } else {
+  //   return `Sorry, didn't hear back from LLM!`
+  // }
 }
 
 export async function POST(req: NextRequest) {
