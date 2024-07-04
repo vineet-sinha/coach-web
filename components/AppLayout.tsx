@@ -11,8 +11,11 @@ import { signIn, signOut } from '@/auth'
 import '@/app/globals.css'
 
 const navbarTheme: CustomFlowbiteTheme['navbar'] = {
+  root: {
+    base: "px-2 py-2.5 dark:border-gray-700 dark:bg-gray-800 sm:px-4",
+  },
   collapse: {
-    list: "items-center mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium"
+    list: "items-center mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-bold"
   }
 }
 
@@ -41,8 +44,8 @@ export default function RootLayout({
   }, [session])
 
   return (
-    <div className="dark flex flex-col min-h-screen">
-      <header className="sticky top-0 left-0 w-full justify-between items-center p-4 bg-stone-900 text-slate-50 z-10">
+    <div className="flex flex-col min-h-screen">
+      <header className="sticky top-0 left-0 w-full justify-between items-center p-4 z-10">
         <Navbar fluid theme={navbarTheme} className="w-full">
           <Navbar.Brand href="/">
             <Image src="/cone-ai.svg" className="mr-3 h-6 sm:h-9" width="24" height="24" alt="Cone.ai Logo" />
