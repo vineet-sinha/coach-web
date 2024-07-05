@@ -4,14 +4,14 @@ import ChatWindow from '../components/ChatWindow';
 export default function Home() {
 
   return (
-    <div>
+    <div className="w-full">
       <Head>
         <title>Cone.ai - Coach</title>
         <meta name="description" content="Your Coach" />
         <link rel="icon" href="/cone-ai-192x192.png" />
       </Head>
 
-      <main>
+      <main className="h-full">
         <ChatWindow />
       </main>
     </div>

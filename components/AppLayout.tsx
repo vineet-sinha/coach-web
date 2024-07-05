@@ -87,7 +87,7 @@ export default function RootLayout({
           </Navbar.Collapse>
         </Navbar>
       </header>
-      <div className="flex-1">{children}</div>
+      <div className="flex flex-1">{children}</div>
     </div>
   )
 }

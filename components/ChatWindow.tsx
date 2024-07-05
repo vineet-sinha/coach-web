@@ -37,7 +37,7 @@ const ChatWindow: React.FC<ChatWindowProps> = (props) => {
       const history = (await response.json()) as Typed.ChatSession
 
       setChatSessionId(history.id);
-      setMessages(history.messages);
+      setMessages([welcomeMessage, ...history.messages]);
     } catch (error) {
       console.error('Error fetching chat history:', error);
     }
@@ -116,9 +116,10 @@ const ChatWindow: React.FC<ChatWindowProps> = (props) => {
   }
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full [background:radial-gradient(50%_50%_at_50%_50%,_#ebf3f5_6.99%,_#c5e2f0)]">
+      {/* <div className="flex flex-col h-full relative shadow-[36px_46px_124px_rgba(137,_173,_200,_0.88)] [background:radial-gradient(50%_50%_at_50%_50%,_#ebf3f5_6.99%,_#c5e2f0)] box-border w-full overflow-hidden items-start justify-start py-[0rem] pr-[0rem] pl-[2.125rem] leading-[normal] tracking-[normal] [row-gap:20px] text-left text-[1.125rem] text-gray font-inter border-[3px] border-solid border-lightblue-100 mq1450:flex-wrap mq1450:pl-[1.25rem] mq1450:pr-[1.25rem] mq1450:pb-[1.25rem] mq1450:box-border"></div> */}
       <div className="px-4 py-2">
-        <Button onClick={newSession}>New Session</Button>
+        <Button onClick={newSession}>Clear</Button>
       </div>
 
       <div className="flex-1 overflow-y-auto px-4 py-2" ref={chatContainerRef}>
