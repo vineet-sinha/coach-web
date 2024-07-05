@@ -98,12 +98,12 @@ export default function Home() {
               </div>
             </div>
           </div> */}
-          <div className="md:w-[54.75rem] flex flex-row items-start justify-center max-w-full">
-            <h1 className="z-10 mt-72 md:mt-32 text-[2rem] md:text-[3rem] font-bold m-0 relative text-inherit uppercase font-inherit mq825:text-[3rem] mq825:leading-[0.688rem] mq450:text-[1.813rem] mq450:leading-[0.438rem]">
+          <div className="lg:w-[54.75rem] flex flex-row items-start justify-center max-w-full">
+            <h1 className="z-10 mt-72 lg:mt-32 text-[2rem] lg:text-[3rem] font-bold m-0 relative text-inherit uppercase font-inherit mq825:text-[3rem] mq825:leading-[0.688rem] mq450:text-[1.813rem] mq450:leading-[0.438rem]">
               Learning Should<br/>Be Easy
             </h1>
           </div>
-          <div className="md:w-[54.75rem] flex flex-row items-start justify-center max-w-full">
+          <div className="lg:w-[54.75rem] flex flex-row items-start justify-center max-w-full">
             <Image src="/ConeProposal.png" width="393" height="488" alt='Cone Chatbot' className="z-10" />
           </div>
           <div className="w-full h-full absolute top-[0rem] right-[0rem] bottom-[0rem] left-[0rem]">
@@ -113,7 +113,7 @@ export default function Home() {
               rows={5}
               cols={23}
             /> */}
-            <div className="invisible md:visible absolute top-[60rem] left-[4rem] shadow-[9px_59px_90px_rgba(131,_196,_220,_0.47)] rounded-[50%] [background:linear-gradient(135.94deg,_#dff3ff_8.44%,_#9acdde)] w-[11rem] h-[11.219rem] z-[1]" />
+            <div className="invisible lg:visible absolute top-[60rem] left-[4rem] shadow-[9px_59px_90px_rgba(131,_196,_220,_0.47)] rounded-[50%] [background:linear-gradient(135.94deg,_#dff3ff_8.44%,_#9acdde)] w-[11rem] h-[11.219rem] z-[1]" />
           </div>
         </div>
         <div className="w-[7.375rem] h-[30.688rem] [background:linear-gradient(180deg,_#89c8dd,_#73adc1)] flex flex-row items-start justify-start pt-[5.75rem] pb-[6.5rem] pr-[3.187rem] pl-[3.437rem] box-border shrink-0 z-[1] mt-[-28.688rem] text-[0.875rem] text-whitesmoke font-inter mq450:pl-[1.25rem] mq450:pr-[1.25rem] mq450:box-border">
