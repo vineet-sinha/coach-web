@@ -8,16 +8,31 @@ if (process.env.OPENAI_API_KEY) {
   openAIApi = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 }
 
-const systemPrompt = `You are Cone.ai, a highly empathetic coach, based on the GPT-3.5 architecture. Knowledge cutoff: 2021-09`
+const systemPrompt = `You are Cone.ai, a highly empathetic coach. You also understand the need for personalizing insights and therefore you often ask the user short.
 
-async function callOpenAI(messages: Typed.Message[], message: string) {
+This means most of the time your lines should be a sentence or two, unless the user's request requires reasoning or long-form outputs.
+
+Knowledge cutoff: 2023-10`
+const assistantPrompt = `Welcome to Cone.ai! What can I help you learn today?`
+
+async function callOpenAI(messages: Typed.Message[], userName: string, message: string) {
+  const getSystemPrompt = () => {
+    let prompt = systemPrompt + `\nCurrent date: ${(new Date()).toISOString().split('T')[0]}`;
+    if (userName) {
+      prompt += `\nThe user you are chatting with is ${userName}`;
+    }
+    console.log('Using prompt:', prompt);
+    return prompt;
+  }
   const msgsForLLM: OpenAI.ChatCompletionMessageParam[] = [
-    { role: 'system', content: systemPrompt },
+    { role: 'system', content: getSystemPrompt() },
+    { role: 'assistant', content: assistantPrompt },
     ...messages,
     { role: 'user', content: message },
   ]
   const response = await openAIApi.chat.completions.create({
-    model: 'gpt-3.5-turbo',
+    // model: 'gpt-3.5-turbo',
+    model: 'gpt-4o',
     messages: msgsForLLM,
   })
 
@@ -41,7 +56,8 @@ async function callOpenAI(messages: Typed.Message[], message: string) {
 }
 
 export async function POST(req: NextRequest) {
-  const { userId, chatSessionId, message } = await req.json();
+  const { userId, userName, chatSessionId, message } = await req.json();
+  console.log('Request:', { userId, userName, chatSessionId, message })
 
   try {
     if (chatSessionId) {
@@ -54,7 +70,8 @@ export async function POST(req: NextRequest) {
           { status: 500 }
         )
       }
-      const response = await callOpenAI(chatSession.messages, message);
+      const response = await callOpenAI(chatSession.messages, userName, message);
+      console.log('Response from LLM:', response)
       chatSession.messages.push({
         role: MessageRole.user,
         content: message,
@@ -75,7 +92,8 @@ export async function POST(req: NextRequest) {
       });
     } else {
       // create new chat session
-      const response = await callOpenAI([], message);
+      const response = await callOpenAI([], userName, message);
+      console.log('Response from LLM:', response)
       const createInp:Prisma.ChatSessionUncheckedCreateInput = {
         userId,
         messages: [{

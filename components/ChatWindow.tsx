@@ -67,6 +67,7 @@ const ChatWindow: React.FC<ChatWindowProps> = (props) => {
         },
         body: JSON.stringify({
           userId: user.id,
+          userName: user.name,
           chatSessionId: chatSessionId,
           message: messageToSend
         }),
