@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import MaxWidthWrapper from './MaxWidthWrapper'
+import Image from 'next/image'
 import { buttonVariants } from './ui/button'
 import {
   LoginLink,
@@ -21,7 +22,8 @@ const Navbar = () => {
           <Link
             href='/'
             className='flex z-40 font-semibold'>
-            <span>quill.</span>
+            <Image src="/cone-ai-192x192.png" className="mr-3 h-6 sm:h-9" width="24" height="24" alt="Cone.ai Logo" />
+            <span>Cone.ai</span>
           </Link>
 
           <MobileNav isAuth={!!user} />
@@ -35,7 +37,7 @@ const Navbar = () => {
                     variant: 'ghost',
                     size: 'sm',
                   })}>
-                  Pricing
+                  Home
                 </Link>
                 <LoginLink
                   className={buttonVariants({
@@ -54,6 +56,14 @@ const Navbar = () => {
               </>
             ) : (
               <>
+              <Link
+                  href='/dashboard'
+                  className={buttonVariants({
+                    variant: 'ghost',
+                    size: 'sm',
+                  })}>
+                  Home
+                </Link>
                 <Link
                   href='/dashboard'
                   className={buttonVariants({
