@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function absoluteUrl(path: string) {
-  return `https://orange-guide-9xj9vg5r95q3pj9q-3000.app.github.dev/${path}`
+  return `https://localhost:3000/${path}`
 }
 
 export function constructMetadata({
@@ -43,7 +43,7 @@ export function constructMetadata({
       creator: "@PHANTOMGOD"
     },
     icons,
-    metadataBase: new URL('https://orange-guide-9xj9vg5r95q3pj9q-3000.app.github.dev'),
+    metadataBase: new URL('https://localhost:3000'),
     themeColor: '#FFF',
     ...(noIndex && {
       robots: {
