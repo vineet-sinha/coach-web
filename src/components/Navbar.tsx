@@ -32,7 +32,7 @@ const Navbar = () => {
             {!user ? (
               <>
                 <Link
-                  href='/pricing'
+                  href='/'
                   className={buttonVariants({
                     variant: 'ghost',
                     size: 'sm',
@@ -57,7 +57,7 @@ const Navbar = () => {
             ) : (
               <>
               <Link
-                  href='/dashboard'
+                  href='/'
                   className={buttonVariants({
                     variant: 'ghost',
                     size: 'sm',
