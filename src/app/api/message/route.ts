@@ -57,7 +57,7 @@ export const POST = async (req: NextRequest) => {
       },
       indexName: "profilehub",
       // Optionally, specify additional headers and indexHostUrl if needed
-      namespace:userId,
+      namespace: userId,
       indexHostUrl: process.env.PINECONE_HOST,
     },
   });
@@ -100,9 +100,9 @@ export const POST = async (req: NextRequest) => {
 
   PREVIOUS CONVERSATION:
   ${formattedPrevMessages.map((message) => {
-    if (message.role === "user") return `User: ${message.content}\n`;
-    return `Assistant: ${message.content}\n`;
-  })}
+          if (message.role === "user") return `User: ${message.content}\n`;
+          return `Assistant: ${message.content}\n`;
+        })}
 
   \n----------------\n
 

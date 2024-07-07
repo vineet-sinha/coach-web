@@ -1,43 +1,22 @@
-# Quill - A Modern Fullstack SaaS-Platform
+# An Improved Chatbot - for Coaching (powered by GPT-4)
 
-Built with the Next.js 13.5 App Router, tRPC, TypeScript, Prisma & Tailwind
+This project implements a Chatbot powered by OpenAI's GPT-4, designed to support multiple sessions and persist conversations in a MongoDB database. It is built using Next.js, TypeScript, Tailwind CSS, Prisma, and Authjs with Google as the authentication provider.
 
+We are also using flowbite for styling, and also using react-icons.
 
-## Features
+## Getting Started
 
-- 🛠️ Complete SaaS Built From Scratch
-- 💻 Beautiful Landing Page & Pricing Page Included
-- 💳 Free & Pro Plan Using Stripe
-- 📄 A Beautiful And Highly Functional PDF Viewer
-- 🔄 Streaming API Responses in Real-Time
-- 🔒 Authentication Using Kinde
-- 🎨 Clean, Modern UI Using 'shadcn-ui'
-- 🚀 Optimistic UI Updates for a Great UX
-- ⚡ Infinite Message Loading for Performance
-- 📤 Intuitive Drag n’ Drop Uploads
-- ✨ Instant Loading States
-- 🔧 Modern Data Fetching Using tRPC & Zod
-- 🧠 LangChain for Infinite AI Memory
-- 🌲 Pinecone as our Vector Storage
-- 📊 Prisma as our ORM
-- 🔤 100% written in TypeScript
-- 🎁 ...much more
-
-## Getting started
-
-To get started with this project, run
+First, download code. Then get dependencies and generate the database type bindings:
 
 ```bash
-  git clone https://github.com/PHANTOMGOD2OP/Quill_PDF_AI.git
+npm install
+npx prisma gnerate
 ```
 
-and copy the .env.example variables into a separate .env file, fill them out & and that's all you need to get started!
+Now, you can run the development server:
 
+```bash
+npm run dev
+```
 
-## Acknowledgements
-
-- [Kinde Auth](https://link.joshtriedcoding.com/kinde) for making this project possible
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

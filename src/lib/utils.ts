@@ -7,12 +7,12 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function absoluteUrl(path: string) {
-  return `https://verbose-cod-5759p7pjvr34vpv-3000.app.github.dev/${path}`
+  return `https://orange-guide-9xj9vg5r95q3pj9q-3000.app.github.dev/${path}`
 }
 
 export function constructMetadata({
-  title = "Quill - the SaaS for students",
-  description = "Quill is an open-source software to make chatting to your PDF files easy.",
+  title = "Cone.ai - the SaaS for learners",
+  description = "Cone.AI.",
   image = "/thumbnail.png",
   icons = "/favicon.ico",
   noIndex = false
@@ -43,7 +43,7 @@ export function constructMetadata({
       creator: "@PHANTOMGOD"
     },
     icons,
-    metadataBase: new URL('https://verbose-cod-5759p7pjvr34vpv-3000.app.github.dev/'),
+    metadataBase: new URL('https://orange-guide-9xj9vg5r95q3pj9q-3000.app.github.dev'),
     themeColor: '#FFF',
     ...(noIndex && {
       robots: {

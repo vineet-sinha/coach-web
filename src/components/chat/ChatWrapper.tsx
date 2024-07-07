@@ -112,7 +112,7 @@ const ChatWrapper = ({
 
   return (
     <ChatContextProvider fileId={fileId}>
-      <div className='relative min-h-full bg-zinc-50 flex divide-y divide-zinc-200 flex-col justify-between gap-2'>
+      <div className='relative min-h-full bg-zinc-50 flex divide-y divide-zinc-200 flex-col justify-between gap-2 [background:radial-gradient(50%_50%_at_50%_50%,_#ebf3f5_6.99%,_#c5e2f0)]'>
         <div className='flex-1 justify-between flex flex-col mb-28'>
           <Messages fileId={fileId} />
         </div>
