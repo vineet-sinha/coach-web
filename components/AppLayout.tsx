@@ -1,13 +1,14 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useSession } from 'next-auth/react'
 import { Avatar, Button, Dropdown, Navbar } from 'flowbite-react'
 import type { CustomFlowbiteTheme } from 'flowbite-react'
-import { signIn, signOut } from '@/auth'
+import { signIn } from '@/auth'
 import '@/app/globals.css'
 
 const navbarTheme: CustomFlowbiteTheme['navbar'] = {
@@ -26,6 +27,7 @@ export default function RootLayout({
 }>) {
   const pathname = usePathname()
   const session = useSession()
+  const router = useRouter()
 
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [profilePic, setProfilePic] = useState<string | null>(null)
@@ -67,7 +69,7 @@ export default function RootLayout({
                 Chat
               </Navbar.Link>
             )}
-            {!isLoggedIn && <Button onClick={() => signIn('google', { redirectTo: '/', redirect: true })}>Get started</Button>}
+            {!isLoggedIn && <Button onClick={() => router.push('/signin')}>Get started</Button>}
             {isLoggedIn && profilePic && <Dropdown
               arrowIcon={false}
               inline
@@ -82,7 +84,7 @@ export default function RootLayout({
               {/* <Dropdown.Item>Dashboard</Dropdown.Item> */}
               {/* <Dropdown.Item>Settings</Dropdown.Item> */}
               {/* <Dropdown.Divider /> */}
-              <Dropdown.Item onClick={() => signOut({ redirectTo: '/', redirect: true })}>Sign out</Dropdown.Item>
+              <Dropdown.Item onClick={() => router.push('/signout')}>Sign out</Dropdown.Item>
             </Dropdown>}
           </Navbar.Collapse>
         </Navbar>

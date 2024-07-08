@@ -1,11 +1,13 @@
 import Head from 'next/head';
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { Button } from 'flowbite-react'
 // import { FrameComponent } from '../components/HomePageFrameComponent';
 // import { FrameComponentRHS } from '../components/HomePageRightFrameComponent';
-import { signIn } from '@/auth'
 
 export default function Home() {
+  const router = useRouter()
+
   return (
     <div className="relative shadow-[36px_46px_124px_rgba(137,_173,_200,_0.88)] [background:radial-gradient(50%_50%_at_50%_50%,_#ebf3f5_6.99%,_#c5e2f0)] box-border w-full overflow-hidden flex flex-row items-start justify-start py-[0rem] pr-[0rem] pl-[2.125rem] leading-[normal] tracking-[normal] [row-gap:20px] text-left text-[1.125rem] text-gray font-inter border-[3px] border-solid border-lightblue-100 mq1450:flex-wrap mq1450:pl-[1.25rem] mq1450:pr-[1.25rem] mq1450:pb-[1.25rem] mq1450:box-border">
       <Head>
@@ -51,7 +53,7 @@ export default function Home() {
                 <div className="z-10 self-stretch flex flex-col items-start justify-start gap-[3.937rem] max-w-full text-[1.125rem] text-gray mq825:gap-[1.938rem] mq450:gap-[1rem]">
                   <div className="self-stretch flex flex-row items-start justify-start py-[0rem] pr-[0rem] pl-[0.5rem] box-border max-w-full">
                     <div className="flex-1 flex flex-row items-start justify-start max-w-full gap-[1.25rem] mq450:flex-wrap">
-                      <Button className="cursor-pointer pt-[0.75rem] px-[1.75rem] pb-[0.812rem] bg-[transparent] rounded-[9.26px] [background:linear-gradient(167.04deg,_#afe9fd,_#73adc1)] box-border flex flex-row items-start justify-start whitespace-nowrap border-[1.7px] border-solid border-skyblue-100 hover:bg-cadetblue-200 hover:box-border hover:border-[1.7px] hover:border-solid hover:border-cadetblue-100" onClick={() => signIn('google', { redirectTo: '/', redirect: true })}>
+                      <Button className="cursor-pointer pt-[0.75rem] px-[1.75rem] pb-[0.812rem] bg-[transparent] rounded-[9.26px] [background:linear-gradient(167.04deg,_#afe9fd,_#73adc1)] box-border flex flex-row items-start justify-start whitespace-nowrap border-[1.7px] border-solid border-skyblue-100 hover:bg-cadetblue-200 hover:box-border hover:border-[1.7px] hover:border-solid hover:border-cadetblue-100" onClick={() => router.push('/signin')}>
                         <div className="h-[2.894rem] relative rounded-[9.26px] [background:linear-gradient(167.04deg,_#afe9fd,_#73adc1)] box-border hidden border-[1.7px] border-solid border-skyblue-100" />
                         <b className="relative text-[0.869rem] tracking-[0.14em] uppercase inline-block font-inter text-white text-left min-w-[4.375rem] z-[1]">
                           Get Started
