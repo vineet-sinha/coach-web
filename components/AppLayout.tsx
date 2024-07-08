@@ -8,7 +8,6 @@ import Image from 'next/image'
 import { useSession } from 'next-auth/react'
 import { Avatar, Button, Dropdown, Navbar } from 'flowbite-react'
 import type { CustomFlowbiteTheme } from 'flowbite-react'
-import { signIn } from '@/auth'
 import '@/app/globals.css'
 
 const navbarTheme: CustomFlowbiteTheme['navbar'] = {
