@@ -51,7 +51,7 @@ export default function RootLayout({
           <Navbar.Brand href="/">
             <Image src="/cone-ai-v2.png" className="mr-3 h-6 sm:h-9" width="24" height="24" alt="Cone.ai Logo" />
             <span className="self-center whitespace-nowrap text-xl font-semibold">
-              Cone.ai
+              Cone.ai<sup>&nbsp;beta</sup>
             </span>
           </Navbar.Brand>
           <Navbar.Toggle />
