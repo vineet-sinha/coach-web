@@ -13,6 +13,14 @@ npm install
 npx prisma gnerate
 ```
 
+Setup the environment variables. Create a `.env` file with the following:
+```bash
+MONGODB_URI=DB-Store
+AUTH_SECRET=AuthJS-Secret
+AUTH_GOOGLE_ID=Google-Auth
+AUTH_GOOGLE_SECRET=Google-Auth
+OPENAI_API_KEY=GPT35-Key
+```
 Now, you can run the development server:
 
 ```bash
