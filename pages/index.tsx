@@ -11,7 +11,7 @@ export default function Home() {
       <Head>
         <title>Cone.ai - Coach</title>
         <meta name="description" content="Your Coach" />
-        <link rel="icon" href="/cone-ai-192x192.png" />
+        <link rel="icon" href="/cone-ai-v2.png" />
       </Head>
       <div className="h-[30.688rem] w-[7.375rem] relative [background:radial-gradient(50%_50%_at_50%_50%,_#9ae0d3,_#35a7a0_96.07%)] hidden z-[0]" />
       {/* <img
