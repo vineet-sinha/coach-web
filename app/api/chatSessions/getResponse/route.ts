@@ -31,8 +31,7 @@ async function callOpenAI(messages: Typed.Message[], userName: string, message: 
     { role: 'user', content: message },
   ]
   const response = await openAIApi.chat.completions.create({
-    // model: 'gpt-3.5-turbo',
-    model: 'gpt-4o',
+    model: 'gpt-3.5-turbo',
     messages: msgsForLLM,
   })
 
