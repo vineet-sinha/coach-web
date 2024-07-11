@@ -49,7 +49,7 @@ export default function RootLayout({
       <header className="sticky top-0 left-0 w-full justify-between items-center p-4 z-10">
         <Navbar fluid theme={navbarTheme} className="w-full">
           <Navbar.Brand href="/">
-            <Image src="/cone-ai-192x192.png" className="mr-3 h-6 sm:h-9" width="24" height="24" alt="Cone.ai Logo" />
+            <Image src="/cone-ai-v2.png" className="mr-3 h-6 sm:h-9" width="24" height="24" alt="Cone.ai Logo" />
             <span className="self-center whitespace-nowrap text-xl font-semibold">
               Cone.ai
             </span>
