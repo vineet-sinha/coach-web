@@ -99,7 +99,7 @@ export default function Home() {
             </div>
           </div> */}
           <div className="lg:w-[54.75rem] flex flex-row items-start justify-center max-w-full">
-            <h1 className="z-10 mt-72 lg:mt-32 text-[2rem] lg:text-[3rem] font-bold m-0 relative text-inherit uppercase font-inherit mq825:text-[3rem] mq825:leading-[0.688rem] mq450:text-[1.813rem] mq450:leading-[0.438rem]">
+            <h1 className="z-10 mt-72 lg:mt-32 text-[2rem] lg:text-[3rem] font-bold m-0 relative uppercase font-inherit tracking-[0.3rem] mq825:text-[3rem] mq825:leading-[0.688rem] mq450:text-[1.813rem] mq450:leading-[0.438rem]">
               Learning Should<br/>Be Easy
             </h1>
           </div>
